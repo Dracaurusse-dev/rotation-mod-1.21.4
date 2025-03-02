@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "rotation-mod",
+	"version": "${version}",
+	"name": "Rotation Mod",
+	"description": "A mod about rotating things.",
+	"authors": [
+		"Dracaurusse"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rotation-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.rotatation_mod.RotationMod"
+		],
+		"client": [
+			"com.rotatation_mod.RotationModClient"
+		]
+	},
+	"mixins": [
+		"rotation-mod.mixins.json",
+		{
+			"config": "rotation-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
